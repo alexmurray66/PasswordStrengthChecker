@@ -25,10 +25,12 @@ export function scorePassword(pw) {
   for (const word of common) {
     if (lower.includes(word)) { score -= 2; break; }
   }
+  // sequences like 12345 or abcde
+  if (/0123|1234|2345|3456|4567|5678|6789/.test(lower)) score -= 1;
+  if (/abcd|bcde|cdef|defg|efgh|fghi|ghij/.test(lower)) score -= 1;
 
   // Clamp and label
   const clamped = Math.max(0, Math.min(5, score));
   const labels = ['very weak', 'weak', 'ok', 'good', 'strong', 'very strong'];
   return { score: clamped, label: labels[clamped] };
 }
-
