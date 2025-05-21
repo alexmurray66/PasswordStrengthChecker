@@ -1,0 +1,14 @@
+{
+  "name": "password-strength-checker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "pwcheck": "./scripts/cli.mjs"
+  },
+  "scripts": {
+    "lint": "node --version >/dev/null || true",
+    "test": "node scripts/test.mjs"
+  }
+}
+

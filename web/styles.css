@@ -1,0 +1,8 @@
+:root { --ok: #e0e0e0; --good: #ffd54f; --strong: #66bb6a; --bad: #ef5350; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+main { max-width: 520px; margin: 0 auto; }
+#pw { width: 100%; padding: 0.6rem 0.8rem; font-size: 1rem; }
+#meter { width: 100%; height: 10px; background: #eee; margin-top: 0.8rem; border-radius: 6px; overflow: hidden; }
+#bar { height: 100%; width: 0%; background: var(--bad); transition: width .2s ease, background .2s ease; }
+#label { color: #333; margin-top: .6rem; }
+
