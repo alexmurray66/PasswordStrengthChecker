@@ -8,5 +8,9 @@ Planned pieces:
 - Minimal web page for interactive feedback
 - Lightweight tests, no runtime required
 
-No build is required; the code is plain TypeScript/JavaScript and HTML/CSS.
+No build is required; the code is plain JavaScript and HTML/CSS.
 
+Quick start
+
+- CLI: `node scripts/cli.mjs 'MyPass123!'`
+- Web: open `web/index.html` in a browser
