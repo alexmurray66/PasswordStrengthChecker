@@ -1,3 +1,4 @@
+import { extraCommon } from './dictionary.js';
 const common = new Set([
   'password','123456','qwerty','111111','abc123','letmein','welcome','admin','iloveyou','monkey'
 ]);
@@ -24,6 +25,9 @@ export function scorePassword(pw) {
   const lower = pw.toLowerCase();
   for (const word of common) {
     if (lower.includes(word)) { score -= 2; break; }
+  }
+  for (const word of extraCommon) {
+    if (lower.includes(word)) { score -= 1; break; }
   }
   // sequences like 12345 or abcde
   if (/0123|1234|2345|3456|4567|5678|6789/.test(lower)) score -= 1;
