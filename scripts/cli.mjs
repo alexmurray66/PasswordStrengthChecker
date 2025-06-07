@@ -12,8 +12,11 @@ function main() {
     } catch {}
   }
   const res = scorePassword(pw || '');
-  console.log(JSON.stringify(res));
+  if (process.env.PWCHECK_PRETTY) {
+    console.log(`score: ${res.score}  label: ${res.label}`);
+  } else {
+    console.log(JSON.stringify(res));
+  }
 }
 
 main();
-
